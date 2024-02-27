@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pages / Register - NiceAdmin Bootstrap Template</title>
+  <title>Apply Now</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -51,7 +51,7 @@
               <div class="d-flex justify-content-center py-4">
                 <a href="index.html" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/logo.png" alt="">
-                  <span class="d-none d-lg-block">NiceAdmin</span>
+                  <span class="d-none d-lg-block">Teranet Wired Internet</span>
                 </a>
               </div><!-- End Logo -->
 
@@ -60,11 +60,11 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
-                    <p class="text-center small">Enter your personal details to create account</p>
+                    <h5 class="card-title text-center pb-0 fs-4">Register To TWIS</h5>
+                    <p class="text-center small">Enter your personal details to schedule your application</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" novalidate action="process_form.php" method="post">
                     <div class="col-12">
                       <label for="yourName" class="form-label">Your Name</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
@@ -78,12 +78,9 @@
                     </div>
 
                     <div class="col-12">
-                      <label for="yourUsername" class="form-label">Username</label>
-                      <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Please choose a username.</div>
-                      </div>
+                      <label for="yournumber" class="form-label">Contact Number</label>
+                      <input type="number" name="number" class="form-control" id="yournumber" required>
+                      <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
 
                     <div class="col-12">
@@ -91,7 +88,18 @@
                       <input type="password" name="password" class="form-control" id="yourPassword" required>
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
-
+              
+                    <div class="col-12">
+                     <label for="yourSelection" class="form-label">Package</label>
+                      <select name="selection" class="form-control" id="yourSelection" required>
+                         <option value="" disabled selected>- Select Package</option>
+                         <option value="800">Plan 35 MBPS</option>
+                         <option value="1000">Plan 50 MBPS</option>
+                         <option value="1300">Plan 1000 MBPS</option>
+                      </select>
+                    <div class="invalid-feedback">Please, select an option!</div>
+                    </div>
+                    
                     <div class="col-12">
                       <div class="form-check">
                         <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
